@@ -1,0 +1,33 @@
+1.	Obtenir l’ID et la date du dernier commit
+---------------------------------------------
+PS C:\Users\cpopescu> svn info "file://trunk/cpp" --xml
+
+Answer
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+<entry
+   kind="dir"
+   path="cpp"
+   revision="18317">
+<url>file:///trunk/cpp</url>
+<relative-url>^/trunk/cpp</relative-url>
+<repository>
+<root>file://front</root>
+<uuid>9bf820d6-51f0-6f48-94dc-e9a82751c66d</uuid>
+</repository>
+<commit
+   revision="18268">
+<author>msarin</author>
+<date>2017-09-08T13:04:46.998585Z</date>
+</commit>
+</entry>
+</info> 
+ 
+ 
+Le commit est simple à obtenir avec Xpath. En fait la date aussi mais il faut la parser depuis le format IEEE.
+Cela permettra de générer le nom du répertoire de destination.
+
+
+2.	Get informations on SVN commits
+----------------------------------
+svn log -r 1594:HEAD --xml file://truk/CSHARP

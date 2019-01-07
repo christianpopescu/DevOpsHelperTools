@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Context>
+    <Svn Uri="file://trunk/cpp" />
+    <SyncTarget Root="H:\ccp_vhdd\Workspace\Sync\DiskE\" Folder="2018_03_23_svn_19888" />
+    <RevisionInterval Before="19791" End="HEAD" />
+    <Log File="e:\temp\log_export_svn_2018_03_23.log" />
+    <Git Workspace="E:\ccp_vhdd\Workspace\LocalWorkspace\SophisEquityFrontCpp" TargetBranch="master" />
+  </Context>
+</Config>
