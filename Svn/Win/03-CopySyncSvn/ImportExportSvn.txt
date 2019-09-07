@@ -1,0 +1,24 @@
+### 1. example of dump command
+svnrdump dump http://pc:18080/svn/Christian >RepoChristian_2018_11_02.dmp
+svnrdump dump http://pc:18080/svn/App >App_2019_06_13.dmp
+
+### 2.  create a pre-revprop-change hook
+	# for windows add bat file
+
+### 3. Loaddump in new repository
+svnrdump load file:///F:/vhdd_svn/ProjectsSoftwareEngineering < ProjectsSoftwareEngineering_2018_11_02.dmp
+svnrdump load file:///F:/vhdd_svn/App < App_2019_06_13.dmp
+
+
+### 4. To keep the two repositories synchronized
+
+svnsync initialize "file:///F:/vhdd_svn/ProjectsSoftwareEngineering"  http://pc:18080/svn/ProjectsSoftwareEngineering/ --allow-non-empty
+
+svnsync copy-revprops "file:///F:/vhdd_svn/ProjectsSoftwareEngineering"  http://pc:18080/svn/ProjectsSoftwareEngineering/
+
+E:\Temp\svnrepotest>svnsync sync "file:///F:/vhdd_svn/ProjectsSoftwareEngineering"  http://pc:18080/svn/ProjectsSoftwareEngineering/
+Transmitting file data ..............................
+Committed revision 292.
+Copied properties for revision 292.
+Committed revision 293.
+Copied properties for revision 293.
