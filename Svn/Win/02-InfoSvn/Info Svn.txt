@@ -1,4 +1,4 @@
-1.	Obtenir l’ID et la date du dernier commit
+1.	Get ID and Date of last Commit
 ---------------------------------------------
 PS C:\Users\cpopescu> svn info "file://trunk/cpp" --xml
 
@@ -23,10 +23,9 @@ Answer
 </entry>
 </info> 
  
- 
-Le commit est simple à obtenir avec Xpath. En fait la date aussi mais il faut la parser depuis le format IEEE.
-Cela permettra de générer le nom du répertoire de destination.
 
+The commit could be easy obtained with XPath.
+The same for the date but the parsing should be done from IEEE format. Having the date allows to generate the name of destination folder.
 
 2.	Get informations on SVN commits
 ----------------------------------
