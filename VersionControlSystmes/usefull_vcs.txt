@@ -1,0 +1,5 @@
+## find all local Git Repositories
+find . -name ".git"
+
+## find all local svn repositories
+find . -name ".svn"
