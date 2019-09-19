@@ -1,0 +1,1 @@
+print qx(git log);
