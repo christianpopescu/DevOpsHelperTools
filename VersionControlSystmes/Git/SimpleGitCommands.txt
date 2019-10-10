@@ -5,3 +5,59 @@ git log --since="2019-09-08T16:36:00-07:00"
 
 ## log remote branch from 08/09/2019
  git log --since="2019-09-08T16:36:00-07:00" origin/sandbox
+ 
+ 
+ == Git
+
+=== Git merge Hotfix with fast forward
+
+Suppose that we create a branch Hotfix from Master. After test and validation we want to integrate Hotfix to Master and then delete Hotfix branch.
+
+* Get Hotfix localy
+	
+	git checkout Hotfix
+	
+* Get Master localy
+	
+	git checkout Master
+	
+* Merge Hotfix to Master
+
+	(master)
+	git merge  Hotfix
+	Updating 839a27b2..190e0723
+	Fast-forward
+	
+* Push master on remote
+
+	(master)
+	git push
+	
+* Delete local branch Hotfix
+
+	(master)
+	git branch -d Hotfix
+
+
+* Delete remote branch Hotfix
+
+	git push -d <remote_name> <branch_name>
+
+=== Rename remote branch
+
+* Create new branch with the "new"
+
+	git branch new-branch-name origin/old-branch-name
+	
+* Push the branch to the remote
+
+	git push origin --set-upstream new-branch-name
+	
+* Delete the old remote branch
+
+	git push origin :old-branch-name
+
+Note: To see the new branch on the others repositories :
+
+	git fetch origin
+	git remote prune origin
