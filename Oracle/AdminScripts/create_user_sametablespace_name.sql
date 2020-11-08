@@ -4,17 +4,19 @@
 -- -------------------------
 -- &1 - Schema name AND tablespace name
 -- &2 - Password
+-- &3 - Tablespace
 -- ----------------------------
 -- Modification history
 -- ---------------------
 -- 2012-09-04.ccp - pause and exit added (as it is executed from command file)
 -- 2015.10.02.ccp - pause put in comment (as used from powershell)
+-- 2020.11.08.CCP - separate user from tablespace parameter
 -- ----------------------------
 
 
 CREATE USER &1
   IDENTIFIED BY &2
-  DEFAULT TABLESPACE &1
+  DEFAULT TABLESPACE &3
   TEMPORARY TABLESPACE TEMP
   PROFILE DEFAULT
   ACCOUNT UNLOCK;
@@ -35,7 +37,7 @@ CREATE USER &1
   GRANT CREATE VIEW TO &1 WITH ADMIN OPTION;
   GRANT CREATE ANY SEQUENCE TO &1 WITH ADMIN OPTION;
 
-  ALTER USER &1 QUOTA UNLIMITED ON &1;
+  ALTER USER &1 QUOTA UNLIMITED ON &3;
 
 --accept l_input prompt 'Press <Enter> key to exit!'
 
