@@ -61,3 +61,6 @@ Note: To see the new branch on the others repositories :
 
 	git fetch origin
 	git remote prune origin
+	
+* Git clone from svn (if used from Tortoise the ming path should be indicated	
+git.exe svn clone "file:///F/ProjectsSoftwareEngineering/" "E:\workspace\ProjectsSoftwareEngineering" -r 0:HEAD
