@@ -1,0 +1,28 @@
+= Oracle Useful Scripts
+Doc Writer <christian.popescu@outlook.com>
+v 1.0, 2023-03-24
+:toc:
+:toclevels: 5
+:sectnums:
+:pdf-page-size: A3
+:pdf-style:
+
+== Introduction
+
+Useful scripts to administrate Oracle Database.
+
+== Information from old documentation
+
+Management of users and tablespaces.
+
+The case of managed oracle files.
+Oracle will managed the datafile if DB_CREATE_FILE_DEST parameter is set.
+Example.
+alter system set DB_CREATE_FILE_DEST ='C:\app\Oracle\oradata';
+
+
+
+*drop_tablespace_and_datafiles_auto.sql*
+Drop tablespace and data file.
+Input parameter:
+1.	Tablespace parameter
