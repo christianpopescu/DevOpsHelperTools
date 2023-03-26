@@ -13,6 +13,7 @@ Useful scripts to administrate Oracle Database.
 
 include::pages/AdminScripts.adoc[]
 
+
 == Information from old documentation
 
 Management of users and tablespaces.
