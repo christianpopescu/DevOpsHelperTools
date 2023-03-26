@@ -1,0 +1,23 @@
+= Oracle Admin Scripts
+Doc Writer <christian.popescu@outlook.com>
+v 1.0, 2023-03-24
+:toc:
+:toclevels: 5
+:sectnums:
+:pdf-page-size: A3
+:pdf-style:
+
+
+
+== Cheatsheet
+
+* show users in database
+
+[source, sql]
+....
+    column username format a30;
+    column account_status format a30;
+    select username, user_id, account_status from dba_users;
+
+
+....

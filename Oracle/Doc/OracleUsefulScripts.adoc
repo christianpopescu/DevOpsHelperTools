@@ -11,6 +11,8 @@ v 1.0, 2023-03-24
 
 Useful scripts to administrate Oracle Database.
 
+include::pages/AdminScripts.adoc[]
+
 == Information from old documentation
 
 Management of users and tablespaces.
